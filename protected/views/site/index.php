@@ -15,6 +15,11 @@ store and report on water and satination assets inventory data for all of Tanzan
 <p>It includes GIS component with the necessary tools to deal with data storage, map
 publication and geodatabase management.
 </p>
+<p>
+This web based Geographic Information System is part of a set of tools that support further planning and development of WSS
+infrastructure.
+
+</p>
 </div>
 " ;
 
