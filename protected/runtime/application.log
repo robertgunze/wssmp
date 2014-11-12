@@ -1,0 +1,18 @@
+2014/11/12 15:42:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "uploads/index.html".' in /var/www/yii-1.1.15/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii-1.1.15/framework/web/CWebApplication.php(141): CWebApplication->runController('uploads/index.h...')
+#1 /var/www/yii-1.1.15/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/wssmp/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/wssmp/index.php?r=uploads/index.html
+HTTP_REFERER=http://localhost/wssmp/
+---
+2014/11/12 15:43:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "uploads/index.html".' in /var/www/yii-1.1.15/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii-1.1.15/framework/web/CWebApplication.php(141): CWebApplication->runController('uploads/index.h...')
+#1 /var/www/yii-1.1.15/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/wssmp/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/wssmp/index.php?r=uploads/index.html
+HTTP_REFERER=http://localhost/wssmp/
+---

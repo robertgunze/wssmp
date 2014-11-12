@@ -4,17 +4,19 @@
 $this->pageTitle=Yii::app()->name;
 ?>
 
-<h1>Welcome to <i><?php echo CHtml::encode(Yii::app()->name); ?></i></h1>
+<?php echo TbHtml::pageHeader('', Yii::t('strings','Welcome to '.CHtml::encode(Yii::app()->name)))?>
 
-<p>Congratulations! You have successfully created your Yii application.</p>
+<?php $aboutContent = 
+"
+<h2>WSSMP</h2>
+<div style='font-size:large;'>
+<p>WSS MASTER PLAN  Database is a comprehensive system designed to collect,
+store and report on water and satination assets inventory data for all of Tanzania's WSS networks.</p>
+<p>It includes GIS component with the necessary tools to deal with data storage, map
+publication and geodatabase management.
+</p>
+</div>
+" ;
 
-<p>You may change the content of this page by modifying the following two files:</p>
-<ul>
-	<li>View file: <code><?php echo __FILE__; ?></code></li>
-	<li>Layout file: <code><?php echo $this->getLayoutFile('main'); ?></code></li>
-</ul>
-
-<p>For more details on how to further develop this application, please read
-the <a href="http://www.yiiframework.com/doc/">documentation</a>.
-Feel free to ask in the <a href="http://www.yiiframework.com/forum/">forum</a>,
-should you have any questions.</p>
+?>
+<?php echo TbHtml::heroUnit(null,$aboutContent);?>

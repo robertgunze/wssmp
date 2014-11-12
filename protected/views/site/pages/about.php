@@ -6,7 +6,19 @@ $this->breadcrumbs=array(
 	'About',
 );
 ?>
-<h1>About</h1>
+<?php echo TbHtml::pageHeader('', 'About'); ?>
 
-<p>This is a "static" page. You may change the content of this page
-by updating the file <code><?php echo __FILE__; ?></code>.</p>
+<?php $aboutContent = 
+"
+<h2>WSSMP</h2>
+<div style='font-size:small;'>
+Product Version: WSSMP 0.0.5 (Release 201210100934)<br />
+Updates: Updates available<br />
+PHP: 5.4<br />
+System: Linux <br />
+Copyright © 2014 by FinogSolutions. All Rights Reserved.
+</div>
+" ;
+
+?>
+<?php echo TbHtml::heroUnit(null,$aboutContent);?>

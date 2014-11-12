@@ -46,6 +46,10 @@ class SiteController extends Controller
 		}
 	}
 
+	public function actionMap(){
+		header("Location: ".Yii::app()->baseUrl.'/uploads/index.html');
+	}
+
 	/**
 	 * Displays the contact page
 	 */

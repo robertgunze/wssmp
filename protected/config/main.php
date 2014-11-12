@@ -7,27 +7,39 @@
 // CWebApplication properties can be configured here.
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
-	'name'=>'My Web Application',
+	'name'=>'WSSMP',
 
 	// preloading 'log' component
 	'preload'=>array('log'),
+
+	'aliases' => array(
+           'bootstrap' => realpath(__DIR__ . '/../extensions/bootstrap'),
+         ),
+    
+        //Setting default language
+        'sourceLanguage'=>'en_us',
 
 	// autoloading model and component classes
 	'import'=>array(
 		'application.models.*',
 		'application.components.*',
+                'application.extensions.*',
+                'bootstrap.helpers.TbHtml',
+                'ext.qrcode.*',
+                'ext.extckeditor.*',
 	),
 
 	'modules'=>array(
 		// uncomment the following to enable the Gii tool
-		/*
+		
 		'gii'=>array(
+                        'generatorPaths' => array('bootstrap.gii'),
 			'class'=>'system.gii.GiiModule',
-			'password'=>'Enter Your Password Here',
+			'password'=>'gii',
 			// If removed, Gii defaults to localhost only. Edit carefully to taste.
 			'ipFilters'=>array('127.0.0.1','::1'),
 		),
-		*/
+    
 	),
 
 	// application components
@@ -36,6 +48,9 @@ return array(
 			// enable cookie-based authentication
 			'allowAutoLogin'=>true,
 		),
+                'bootstrap' => array(
+                    'class' => 'bootstrap.components.TbApi',
+                ),
 		// uncomment the following to enable URLs in path-format
 		/*
 		'urlManager'=>array(
@@ -47,19 +62,22 @@ return array(
 			),
 		),
 		*/
+                /*
 		'db'=>array(
 			'connectionString' => 'sqlite:'.dirname(__FILE__).'/../data/testdrive.db',
 		),
+                 * 
+                 */
 		// uncomment the following to use a MySQL database
-		/*
+		
 		'db'=>array(
-			'connectionString' => 'mysql:host=localhost;dbname=testdrive',
+			'connectionString' => 'mysql:host=localhost;dbname=wssmp_db',
 			'emulatePrepare' => true,
 			'username' => 'root',
-			'password' => '',
+			'password' => 'drobyg3',
 			'charset' => 'utf8',
 		),
-		*/
+	
 		'errorHandler'=>array(
 			// use 'site/error' action to display errors
 			'errorAction'=>'site/error',
@@ -85,6 +103,6 @@ return array(
 	// using Yii::app()->params['paramName']
 	'params'=>array(
 		// this is used in contact page
-		'adminEmail'=>'webmaster@example.com',
+		'adminEmail'=>'robertgunze@gmail.com',
 	),
 );
