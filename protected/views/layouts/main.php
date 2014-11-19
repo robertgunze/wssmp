@@ -28,14 +28,14 @@
 		<div id="logo"><?php echo CHtml::encode(Yii::app()->name); ?></div>
 	</div><!-- header -->
 
-	<div id="mainmenu" >
+        <div id="mainmenu" >
             <?php  $this->widget('bootstrap.widgets.TbNavbar', array(
                     'brandLabel' => '<strong><span style="color:#47ADCB">WSS </span>MASTER PLAN</strong>',
                     'display' => TbHtml::NAVBAR_DISPLAY_FIXEDTOP,
                     'items'=>array(
                         array(
                             'class' => 'bootstrap.widgets.TbNav',
-			'items'=>array(
+			                'items'=>array(
                                 array('label'=>'Map', 'url'=>array('/site/map'),'visible'=>true ),
 
                                 array('label'=>'System Settings', 'url'=>array('#'),'visible'=>!Yii::app()->user->isGuest, 
@@ -45,6 +45,7 @@
                                     ),
                                 array('label'=>'Users and Security', 'url'=>array('#'),'visible'=>!Yii::app()->user->isGuest),
                                 array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
+								array('label'=>'Web Map', 'url'=>array('/site/page', 'view'=>'webmap')),
 				array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
 				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
 			),
